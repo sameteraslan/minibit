@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>roundtrip_comparison Summary - Criterion.rs</title>
+    <style type="text/css">
+        body {
+            font: 14px Helvetica Neue;
+            text-rendering: optimizelegibility;
+        }
+
+        .body {
+            width: 960px;
+            margin: auto;
+        }
+
+        a:link {
+            color: #1F78B4;
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        #footer {
+            height: 40px;
+            background: #888;
+            color: white;
+            font-size: larger;
+            font-weight: 300;
+        }
+
+        #footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        #footer p {
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <h2>roundtrip_comparison</h2>
+        <h3>Violin Plot</h3>
+        <a href="violin.svg">
+            <img src="violin.svg" alt="Violin Plot" />
+        </a>
+        <p>This chart shows the relationship between function/parameter and iteration time. The thickness of the shaded
+            region indicates the probability that a measurement of the given function/parameter would take a particular
+            length of time.</p>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/bincode/full/report/index.html">
+                <h4>roundtrip_comparison/bincode/full</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/bincode/full/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/bincode/full/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/bincode/full/report/regression.svg">
+                                <img src="../../roundtrip_comparison/bincode/full/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/bincode/minimal/report/index.html">
+                <h4>roundtrip_comparison/bincode/minimal</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/bincode/minimal/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/bincode/minimal/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/bincode/minimal/report/regression.svg">
+                                <img src="../../roundtrip_comparison/bincode/minimal/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/bincode/with_symbol/report/index.html">
+                <h4>roundtrip_comparison/bincode/with_symbol</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/bincode/with_symbol/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/bincode/with_symbol/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/bincode/with_symbol/report/regression.svg">
+                                <img src="../../roundtrip_comparison/bincode/with_symbol/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/borsh/full/report/index.html">
+                <h4>roundtrip_comparison/borsh/full</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/borsh/full/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/borsh/full/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/borsh/full/report/regression.svg">
+                                <img src="../../roundtrip_comparison/borsh/full/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/borsh/minimal/report/index.html">
+                <h4>roundtrip_comparison/borsh/minimal</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/borsh/minimal/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/borsh/minimal/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/borsh/minimal/report/regression.svg">
+                                <img src="../../roundtrip_comparison/borsh/minimal/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/borsh/with_symbol/report/index.html">
+                <h4>roundtrip_comparison/borsh/with_symbol</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/borsh/with_symbol/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/borsh/with_symbol/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/borsh/with_symbol/report/regression.svg">
+                                <img src="../../roundtrip_comparison/borsh/with_symbol/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/messagepack/full/report/index.html">
+                <h4>roundtrip_comparison/messagepack/full</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/messagepack/full/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/messagepack/full/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/messagepack/full/report/regression.svg">
+                                <img src="../../roundtrip_comparison/messagepack/full/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/messagepack/minimal/report/index.html">
+                <h4>roundtrip_comparison/messagepack/minimal</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/messagepack/minimal/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/messagepack/minimal/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/messagepack/minimal/report/regression.svg">
+                                <img src="../../roundtrip_comparison/messagepack/minimal/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/messagepack/with_symbol/report/index.html">
+                <h4>roundtrip_comparison/messagepack/with_symbol</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/messagepack/with_symbol/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/messagepack/with_symbol/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/messagepack/with_symbol/report/regression.svg">
+                                <img src="../../roundtrip_comparison/messagepack/with_symbol/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/minibit/full/report/index.html">
+                <h4>roundtrip_comparison/minibit/full</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/minibit/full/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/minibit/full/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/minibit/full/report/regression.svg">
+                                <img src="../../roundtrip_comparison/minibit/full/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/minibit/minimal/report/index.html">
+                <h4>roundtrip_comparison/minibit/minimal</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/minibit/minimal/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/minibit/minimal/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/minibit/minimal/report/regression.svg">
+                                <img src="../../roundtrip_comparison/minibit/minimal/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/minibit/with_symbol/report/index.html">
+                <h4>roundtrip_comparison/minibit/with_symbol</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/minibit/with_symbol/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/minibit/with_symbol/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/minibit/with_symbol/report/regression.svg">
+                                <img src="../../roundtrip_comparison/minibit/with_symbol/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/postcard/full/report/index.html">
+                <h4>roundtrip_comparison/postcard/full</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/postcard/full/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/postcard/full/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/postcard/full/report/regression.svg">
+                                <img src="../../roundtrip_comparison/postcard/full/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/postcard/minimal/report/index.html">
+                <h4>roundtrip_comparison/postcard/minimal</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/postcard/minimal/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/postcard/minimal/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/postcard/minimal/report/regression.svg">
+                                <img src="../../roundtrip_comparison/postcard/minimal/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="plots">
+            <a href="../../roundtrip_comparison/postcard/with_symbol/report/index.html">
+                <h4>roundtrip_comparison/postcard/with_symbol</h4>
+            </a>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="../../roundtrip_comparison/postcard/with_symbol/report/pdf.svg">
+                                <img src="../../roundtrip_comparison/postcard/with_symbol/report/pdf_small.svg" alt="PDF of Slope" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="../../roundtrip_comparison/postcard/with_symbol/report/regression.svg">
+                                <img src="../../roundtrip_comparison/postcard/with_symbol/report/regression_small.svg" alt="Regression" width="450"
+                                    height="300" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="footer">
+        <p>This report was generated by
+            <a href="https://github.com/bheisler/criterion.rs">Criterion.rs</a>, a statistics-driven benchmarking
+            library in Rust.</p>
+    </div>
+</body>
+
+</html>

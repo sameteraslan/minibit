@@ -1,0 +1,54 @@
+[package]
+name = "minibit"
+version = "0.1.0"
+edition = "2021"
+authors = ["Samet Eraslan <absameteraslan@gmail.com>"]
+description = "Ultra-fast wire protocol for financial and low-latency messaging"
+license = "MIT OR Apache-2.0"
+keywords = ["protocol", "serialization", "finance", "low-latency", "binary"]
+categories = ["network-programming", "encoding", "no-std"]
+repository = "https://github.com/sameteraslan/minibit"
+readme = "./README.md"
+
+[features]
+default = ["std"]
+std = []
+lz4 = ["dep:lz4_flex"]
+aead = ["dep:chacha20poly1305"]
+
+[dependencies]
+# Optional compression
+lz4_flex = { version = "0.11", optional = true, default-features = false }
+
+# Optional encryption  
+chacha20poly1305 = { version = "0.10", optional = true, default-features = false, features = ["alloc"] }
+
+[build-dependencies]
+protobuf-codegen = "3"     # or whichever version matches prost/protobuf
+capnpc = "0.18"             # example version
+
+[dev-dependencies]
+proptest = "1.4"
+criterion = { version = "0.5", features = ["html_reports"] }
+
+# Comparison benchmarks - only needed for dev/benchmarking
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+rmp-serde = "1.1"  # MessagePack
+postcard = { version = "1.0", features = ["alloc"] }
+borsh = { version = "0.10.4" }
+
+[[bench]]
+name = "protocol_bench"
+harness = false
+required-features = ["std"]
+
+[[bench]]
+name = "comparison_bench"
+harness = false
+required-features = ["std"]
+
+[lib]
+name = "minibit"
+path = "src/lib.rs"
