@@ -1,6 +1,6 @@
 [package]
 name = "minibit"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Samet Eraslan <absameteraslan@gmail.com>"]
 description = "Ultra-fast wire protocol for financial and low-latency messaging"
@@ -9,6 +9,7 @@ keywords = ["protocol", "serialization", "finance", "low-latency", "binary"]
 categories = ["network-programming", "encoding", "no-std"]
 repository = "https://github.com/sameteraslan/minibit"
 readme = "./README.md"
+documentation = "https://docs.rs/minibit"
 
 [features]
 default = ["std"]
